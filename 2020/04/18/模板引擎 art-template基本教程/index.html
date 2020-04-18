@@ -6,12 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>青柄紫鞘</title>
+  <title>模板引擎 art-template基本教程 | 青柄紫鞘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="青柄紫鞘">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="模板引擎 art-template文档：http:&#x2F;&#x2F;aui.github.io&#x2F;art-template&#x2F;zh-cn&#x2F; Github: https:&#x2F;&#x2F;github.com&#x2F;aui&#x2F;art-template 模板渲染下载 art-template 模板引擎 引入art-template的js文件 1&lt;script src&#x3D;&quot;.&#x2F;js&#x2F;template-web.js&quot;&gt;&lt;&#x2F;scr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="模板引擎 art-template基本教程">
+<meta property="og:url" content="http://yoursite.com/2020/04/18/%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%20art-template%E5%9F%BA%E6%9C%AC%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="青柄紫鞘">
+<meta property="og:description" content="模板引擎 art-template文档：http:&#x2F;&#x2F;aui.github.io&#x2F;art-template&#x2F;zh-cn&#x2F; Github: https:&#x2F;&#x2F;github.com&#x2F;aui&#x2F;art-template 模板渲染下载 art-template 模板引擎 引入art-template的js文件 1&lt;script src&#x3D;&quot;.&#x2F;js&#x2F;template-web.js&quot;&gt;&lt;&#x2F;scr">
+<meta property="article:published_time" content="2020-04-18T10:21:46.955Z">
+<meta property="article:modified_time" content="2020-04-18T10:18:10.281Z">
 <meta property="article:author" content="青柄紫鞘">
 <meta name="twitter:card" content="summary">
   
@@ -149,16 +153,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-模板引擎 art-template基本教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-模板引擎 art-template基本教程" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/18/%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%20art-template%E5%9F%BA%E6%9C%AC%E6%95%99%E7%A8%8B/">模板引擎 art-template基本教程</a>
+    <h1 class="article-title" itemprop="name">
+      模板引擎 art-template基本教程
     </h1>
   
 
@@ -176,9 +178,69 @@
 <h3 id="模板渲染"><a href="#模板渲染" class="headerlink" title="模板渲染"></a>模板渲染</h3><p>下载 art-template 模板引擎</p>
 <p>引入art-template的js文件</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./js/template-web.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-        
+
+<a id="more"></a> 
+
+<p>在script里面编写art-template模板</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//在script标签里面写html结构，需要制定type类型</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/html"</span> <span class="attr">id</span>=<span class="string">"tpl"</span>&gt;</span></span><br><span class="line"><span class="handlebars"><span class="xml"> 	<span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">		 <span class="tag">&lt;<span class="name">span</span>&gt;</span></span><span class="template-variable">&#123;&#123;name&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">		 <span class="tag">&lt;<span class="name">span</span>&gt;</span></span><span class="template-variable">&#123;&#123;age&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>将特定模板与数据进行绑定</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//template 方法就是告诉模板引擎，哪个数据需要跟哪个模板进行拼接</span></span><br><span class="line"><span class="keyword">const</span> html = template(<span class="string">'tpl'</span>,&#123;</span><br><span class="line">	name: <span class="string">'张三'</span>,</span><br><span class="line">    age: <span class="number">20</span></span><br><span class="line"> &#125;); </span><br><span class="line"><span class="comment">//html 就是拼接好的字符串</span></span><br></pre></td></tr></table></figure>
+
+<p>就把拼接好的内容扔到页面的某一个元素内就好</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">container.innerHTML = html;</span><br></pre></td></tr></table></figure>
+
+<h3 id="原文输出"><a href="#原文输出" class="headerlink" title="原文输出"></a>原文输出</h3><p>如果数据中携带HTML标签，默认情况下，模板引擎不会解析标签，会将其转义后原文输出</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123;@ value &#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h3><p>判断条件都是成对出现，有开始就有结束，例如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;if 条件&#125;&#125; ... &#123;&#123;/if&#125;&#125;</span><br><span class="line">&#123;&#123;if v1&#125;&#125; ... &#123;&#123;else if v2&#125;&#125; ... &#123;&#123;/if&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>示例demo：当满足条件显示不同的内容</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/html"</span> <span class="attr">id</span>=<span class="string">"tpl"</span>&gt;</span></span><br><span class="line"><span class="handlebars"><span class="xml">	<span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">		<span class="tag">&lt;<span class="name">span</span>&gt;</span>姓名：</span><span class="template-variable">&#123;&#123;@ name&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">		<span class="tag">&lt;<span class="name">span</span>&gt;</span>年龄：</span><span class="template-variable">&#123;&#123;age&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">	</span><span class="template-variable">&#123;&#123;<span class="builtin-name">if</span> age &gt; 18&#125;&#125;</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">		<span class="tag">&lt;<span class="name">div</span>&gt;</span>年龄大于18<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">	</span><span class="template-variable">&#123;&#123;<span class="builtin-name">else</span>&#125;&#125;</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">		<span class="tag">&lt;<span class="name">div</span>&gt;</span>年龄小于18<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">	</span><span class="template-tag">&#123;&#123;/<span class="name"><span class="builtin-name">if</span></span>&#125;&#125;</span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;each target&#125;&#125;</span><br><span class="line">    &#123;&#123;$index&#125;&#125; &#123;&#123;$value&#125;&#125;</span><br><span class="line">&#123;&#123;&#x2F;each&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="导入模板变量"><a href="#导入模板变量" class="headerlink" title="导入模板变量"></a>导入模板变量</h3><p>有的时候我们需要在模板引擎里面导入其他的一些对象，例如：我们需要在模板里面进行日期的格式化，所以我们需要进行导入模板变量</p>
+<p>语法:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//导入</span></span><br><span class="line">template.defaults.imports.变量名 = 变量值;</span><br><span class="line"><span class="comment">//使用</span></span><br><span class="line">$imports.变量名称  <span class="comment">//外部导入的变量以及全局变量</span></span><br></pre></td></tr></table></figure>
+
+<p>在模板引擎里面进行引入</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>$imports.dataFormat(time)<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在script里面进行导入</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dateFormat</span>（未格式化的原始时间）</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'已经格式化好的当前时间'</span></span><br><span class="line">&#125;</span><br><span class="line">template.defaults.imports.dateFormat = dateFormat;</span><br></pre></td></tr></table></figure>
+
+<p>示例demo:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"container"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/template-web.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/html"</span> <span class="attr">id</span>=<span class="string">"tpl"</span>&gt;</span></span><br><span class="line"><span class="handlebars"><span class="xml">	<span class="tag">&lt;<span class="name">div</span>&gt;</span>当前时间是：</span><span class="template-variable">&#123;&#123;$imports.dateFormat(date)&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="actionscript">		<span class="comment">// 将方法导入到模板中，注意：需要在调用方法之前进行导入</span></span></span><br><span class="line">		template.defaults.imports.dateFormat = dateFormat;</span><br><span class="line"><span class="actionscript">		<span class="comment">// 这是告诉模板引擎将模板id为tpl的模板和data数据对象进行拼接</span></span></span><br><span class="line"><span class="actionscript">		<span class="keyword">var</span> html = template(<span class="string">'tpl'</span>, &#123;</span></span><br><span class="line"><span class="javascript">			date: <span class="keyword">new</span> <span class="built_in">Date</span>()</span></span><br><span class="line">		&#125;);</span><br><span class="line"><span class="javascript">		<span class="built_in">document</span>.getElementById(<span class="string">'container'</span>).innerHTML = html;</span></span><br><span class="line"><span class="actionscript">		<span class="function"><span class="keyword">function</span> <span class="title">dateFormat</span><span class="params">(date)</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">			<span class="keyword">return</span> date.getFullYear() + <span class="string">'年'</span> + (date.getMonth() + <span class="number">1</span>) + <span class="string">'月'</span> + date.getDate() + <span class="string">'日'</span>;</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -187,16 +249,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/18/%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%20art-template%E5%9F%BA%E6%9C%AC%E6%95%99%E7%A8%8B/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/18/%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%20art-template%E5%9F%BA%E6%9C%AC%E6%95%99%E7%A8%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/17/git%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git 的基本使用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -216,271 +337,14 @@
 
 
 
-
   
-    <article id="post-git 的基本使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/17/git%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">git 的基本使用</a>
-    </h1>
   
 
-        
-        <a href="/2020/04/17/git%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-04-17T10:57:29.306Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="git-的安装"><a href="#git-的安装" class="headerlink" title="git 的安装"></a>git 的安装</h2><p>git 的下载地址： <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a></p>
-<h6 id="查看-git-版本"><a href="#查看-git-版本" class="headerlink" title="查看 git 版本"></a>查看 git 版本</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查看 git 命令</span></span><br><span class="line">git --help</span><br><span class="line"></span><br><span class="line"><span class="comment">// 查看 git 版本</span></span><br><span class="line">git --version</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这里出现版本号就说明安装成功了</span></span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/17/git%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-node.js 安装教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/17/node.js%20%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">node.js 安装教程</a>
-    </h1>
   
 
-        
-        <a href="/2020/04/17/node.js%20%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-04-17T05:22:31.026Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="node-js-安装与使用教程"><a href="#node-js-安装与使用教程" class="headerlink" title="node.js 安装与使用教程"></a>node.js 安装与使用教程</h6><p><strong>Node</strong> <strong>是一个</strong>基于Chrome V8引擎的<strong>JavaScript代码运行环境</strong>。</p>
-<p>node下载地址： <a href="http://nodejs.cn/" target="_blank" rel="noopener">http://nodejs.cn/</a></p>
-<p>windows系统用户在Node官网下载后缀为.msi的文件到本地，双击下一步下一步安装即可。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 查看 node 的版本号</span><br><span class="line">node -v</span><br><span class="line">&#x2F;&#x2F; 此时出现版本号说明安装成功了</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/17/node.js%20%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-创建个人博客教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/15/%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/">创建个人博客教程</a>
-    </h1>
   
 
-        
-        <a href="/2020/04/15/%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-04-15T07:50:30.246Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="创建个人博客-hexo框架教程"><a href="#创建个人博客-hexo框架教程" class="headerlink" title="创建个人博客  hexo框架教程"></a>创建个人博客  hexo框架教程</h2><h4 id="环境配置：-首先要先安装-node-js-和-git-这两个必须要有，否则无法实现操作"><a href="#环境配置：-首先要先安装-node-js-和-git-这两个必须要有，否则无法实现操作" class="headerlink" title="环境配置： 首先要先安装 node.js 和 git 这两个必须要有，否则无法实现操作"></a>环境配置： 首先要先安装 node.js 和 git 这两个必须要有，否则无法实现操作</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这些都是在 node.js 里面操作的</span></span><br><span class="line"><span class="comment">// 全局安装 hexo框架</span></span><br><span class="line">npm i -g hexo -cli</span><br></pre></td></tr></table></figure>
-
-
-
-<h6 id="查看-hexo-版本号"><a href="#查看-hexo-版本号" class="headerlink" title="查看 hexo 版本号"></a>查看 hexo 版本号</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查看 hexo 版本号</span></span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/15/%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/15/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/15/hello-world/" class="archive-article-date">
-  	<time datetime="2020-04-15T07:43:02.640Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/15/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -503,8 +367,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
