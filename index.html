@@ -173,18 +173,7 @@
       
         <h4 id="input框-单选-和-多选"><a href="#input框-单选-和-多选" class="headerlink" title="input框 单选 和 多选"></a>input框 单选 和 多选</h4><p><strong>radio 表示单选</strong></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// type="radio"  radio 表示单选</span></span><br><span class="line">&lt;input type=<span class="string">"radio"</span> id=<span class="string">"male"</span> value=<span class="string">"1"</span> v-model=<span class="string">'gender'</span>&gt;</span><br><span class="line">	&lt;label <span class="keyword">for</span>=<span class="string">"male"</span>&gt;男&lt;<span class="regexp">/label&gt;</span></span><br><span class="line"><span class="regexp">&lt;input type="radio" id="female" value="2" v-model='gender'&gt;</span></span><br><span class="line"><span class="regexp">	&lt;label for="female"&gt;女&lt;/</span>label&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>checkbox表示多选</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// type="checkbox" checkbox表示多选</span></span><br><span class="line">&lt;input type=<span class="string">"checkbox"</span> id=<span class="string">"ball"</span> value=<span class="string">"1"</span> v-model=<span class="string">'hobby'</span>&gt;</span><br><span class="line">	&lt;label <span class="keyword">for</span>=<span class="string">"ball"</span>&gt;篮球&lt;<span class="regexp">/label&gt;</span></span><br><span class="line"><span class="regexp">&lt;input type="checkbox" id="sing" value="2" v-model='hobby'&gt;</span></span><br><span class="line"><span class="regexp">	&lt;label for="sing"&gt;唱歌&lt;/</span>label&gt;</span><br><span class="line">&lt;input type=<span class="string">"checkbox"</span> id=<span class="string">"code"</span> value=<span class="string">"3"</span> v-model=<span class="string">'hobby'</span>&gt;</span><br><span class="line">	&lt;label <span class="keyword">for</span>=<span class="string">"code"</span>&gt;写代码&lt;<span class="regexp">/label&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>表单修饰符</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 自动将用户的输入值转为数值类型 --&gt;</span><br><span class="line">&lt;input v-model.number=<span class="string">"age"</span> type=<span class="string">"number"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--自动过滤用户输入的首尾空白字符   --&gt;</span><br><span class="line">&lt;input v-model.trim=<span class="string">"msg"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 在“change”时而非“input”时更新 --&gt;</span><br><span class="line">&lt;input v-model.lazy=<span class="string">"msg"</span> &gt;</span><br></pre></td></tr></table></figure>
-
-
+        
       
 
       
