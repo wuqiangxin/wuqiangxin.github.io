@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="青柄紫鞘">
 <meta property="og:description" content="Vue 基本语法使用Vue  是一套用于构建用户界面的渐进式框架">
 <meta property="article:published_time" content="2020-04-26T10:55:29.976Z">
-<meta property="article:modified_time" content="2020-04-26T10:45:58.737Z">
+<meta property="article:modified_time" content="2020-04-29T04:04:53.587Z">
 <meta property="article:author" content="青柄紫鞘">
 <meta name="twitter:card" content="summary">
   
@@ -262,6 +262,37 @@
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 绑定一个属性 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">v-bind:src</span>=<span class="string">"imageSrc"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 缩写 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">"imageSrc"</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
+
+
+<h3 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h3><h4 id="v-if-使用场景"><a href="#v-if-使用场景" class="headerlink" title="v-if 使用场景"></a>v-if 使用场景</h4><ul>
+<li>1- 多个元素 通过条件判断展示或者隐藏某个元素。或者多个元素</li>
+<li>2- 进行两个视图之间的切换</li>
+</ul>
+<h4 id="v-show-和-v-if的区别"><a href="#v-show-和-v-if的区别" class="headerlink" title="v-show 和 v-if的区别"></a>v-show 和 v-if的区别</h4><ul>
+<li>v-show本质就是标签display设置为none，控制隐藏<ul>
+<li>v-show只编译一次，后面其实就是控制css，而v-if不停的销毁和创建，故v-show性能更好一点。</li>
+</ul>
+</li>
+<li>v-if是动态的向DOM树内添加或者删除DOM元素<ul>
+<li>v-if切换有一个局部编译/卸载的过程，切换过程中合适地销毁和重建内部的事件监听和子组件</li>
+</ul>
+</li>
+</ul>
+<h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><h4 id="v-for"><a href="#v-for" class="headerlink" title="v-for"></a>v-for</h4><ul>
+<li><p>用于循环的数组里面的值可以是对象，也可以是普通元素  </p>
+</li>
+<li><p><strong>不推荐</strong>同时使用 <code>v-if</code> 和 <code>v-for</code></p>
+</li>
+<li><p>当 <code>v-if</code> 与 <code>v-for</code> 一起使用时，<code>v-for</code> 具有比 <code>v-if</code> 更高的优先级。</p>
+</li>
+<li><p>key 的作用</p>
+<ul>
+<li><strong>key来给每个节点做一个唯一标识</strong></li>
+<li><strong>key的作用主要是为了高效的更新虚拟DOM</strong></li>
+</ul>
+</li>
+</ul>
+
       
 
       
@@ -353,6 +384,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/04/29/Vue%E7%BB%93%E6%9E%84/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Vue结构
+        
+      </div>
+    </a>
   
   
     <a href="/2020/04/26/Vscode%E6%89%A9%E5%B1%95/" id="article-nav-older" class="article-nav-link-wrap">
