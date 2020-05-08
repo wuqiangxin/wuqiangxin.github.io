@@ -6,12 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 青柄紫鞘</title>
+  <title>18 使用npx babel-node 安装步骤 | 青柄紫鞘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="青柄紫鞘">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="要用第三方的模块(babel-node)帮我们执行step0.创建jsa.js 12345678var name &#x3D; &#39;hjl&#39;function money()&amp;#123;    console.log(&#39;赚钱&#39;)&amp;#125;export default&amp;#123;    name,    money&amp;#125;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="18 使用npx babel-node 安装步骤">
+<meta property="og:url" content="http://yoursite.com/2020/05/08/18%20%E4%BD%BF%E7%94%A8npx%20babel-node%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/index.html">
 <meta property="og:site_name" content="青柄紫鞘">
+<meta property="og:description" content="要用第三方的模块(babel-node)帮我们执行step0.创建jsa.js 12345678var name &#x3D; &#39;hjl&#39;function money()&amp;#123;    console.log(&#39;赚钱&#39;)&amp;#125;export default&amp;#123;    name,    money&amp;#125;">
+<meta property="article:published_time" content="2020-05-08T03:37:17.966Z">
+<meta property="article:modified_time" content="2020-05-08T03:36:52.522Z">
 <meta property="article:author" content="青柄紫鞘">
 <meta name="twitter:card" content="summary">
   
@@ -149,295 +153,167 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-18 使用npx babel-node 安装步骤" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      18 使用npx babel-node 安装步骤
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/08/18%20%E4%BD%BF%E7%94%A8npx%20babel-node%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/" class="archive-article-date">
+
+        
+        <a href="/2020/05/08/18%20%E4%BD%BF%E7%94%A8npx%20babel-node%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/" class="archive-article-date">
   	<time datetime="2020-05-08T03:37:17.966Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/08/18%20%E4%BD%BF%E7%94%A8npx%20babel-node%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/">18 使用npx babel-node 安装步骤</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="要用第三方的模块-babel-node-帮我们执行"><a href="#要用第三方的模块-babel-node-帮我们执行" class="headerlink" title="要用第三方的模块(babel-node)帮我们执行"></a>要用第三方的模块(babel-node)帮我们执行</h1><p>step0.创建js<br>a.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">'hjl'</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">money</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'赚钱'</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">    name,</span><br><span class="line">    money</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
-          
 
+
+<p>b.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> a <span class="keyword">from</span> <span class="string">'./a.js'</span></span><br><span class="line"><span class="built_in">console</span>.log(a.name)</span><br><span class="line">a.money()</span><br></pre></td></tr></table></figure>
+<p>step1.初始化项目,生成package.json<br>(方式1)npm init -y<br>提示:这个命令在中文的文件夹下执行会报错<br>(方式2)手动创建package.json</p>
+<p>这里推荐使用方式3</p>
+<p>(方式3)npm init<br>提示:name一定要英文<br>step2.安装babel<br>(1)执行命令<br>npm install –save-dev @babel/core @babel/cli @babel/preset-env @babel/node<br>npm install –save @babel/polyfill<br>(2)创建配置文件<code>babel.config.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> presets = [</span><br><span class="line">    [<span class="string">"@babel/env"</span>,&#123;</span><br><span class="line">        targets:&#123;</span><br><span class="line">            edge:<span class="string">"17"</span>,</span><br><span class="line">            firefox:<span class="string">"60"</span>,</span><br><span class="line">            chrome:<span class="string">"67"</span>,</span><br><span class="line">            safari:<span class="string">"11.1"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;]</span><br><span class="line">]</span><br><span class="line"><span class="comment">//暴露</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123; presets &#125;</span><br></pre></td></tr></table></figure>
+<p>step3执行命令<br>npx babel-node b.js</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/08/18%20%E4%BD%BF%E7%94%A8npx%20babel-node%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/30/17%20Vue%E4%BC%A0%E5%8F%82%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-04-30T11:30:35.492Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-30</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/30/17%20Vue%E4%BC%A0%E5%8F%82%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">17 Vue传参（重点）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/30/17%20Vue%E4%BC%A0%E5%8F%82%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89/">17 Vue传参（重点）</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/30/16%20%E5%89%8D%E7%AB%AF%E5%85%A5%E9%97%A8/" class="archive-article-date">
-  	<time datetime="2020-04-30T11:30:32.503Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/30/16%20%E5%89%8D%E7%AB%AF%E5%85%A5%E9%97%A8/">16 前端入门</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/30/Vue%E7%BB%84%E4%BB%B6%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" class="archive-article-date">
-  	<time datetime="2020-04-30T04:02:22.808Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/30/Vue%E7%BB%84%E4%BB%B6%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">Vue组件注意事项</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/29/input%E6%A1%86%E7%9A%84%E5%B1%9E%E6%80%A7/" class="archive-article-date">
-  	<time datetime="2020-04-29T11:14:03.185Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/29/input%E6%A1%86%E7%9A%84%E5%B1%9E%E6%80%A7/">input框的属性</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/29/Vue%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/" class="archive-article-date">
-  	<time datetime="2020-04-29T10:45:34.740Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/29/Vue%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/">Vue图书管理综合案例</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/29/Vue%E7%BB%93%E6%9E%84/" class="archive-article-date">
-  	<time datetime="2020-04-29T04:09:09.680Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/29/Vue%E7%BB%93%E6%9E%84/">Vue结构</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/26/Vue%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-04-26T10:55:29.976Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/26/Vue%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">Vue基本语法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/26/Vscode%E6%89%A9%E5%B1%95/" class="archive-article-date">
-  	<time datetime="2020-04-26T03:55:24.367Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/26/Vscode%E6%89%A9%E5%B1%95/">Vscode扩展</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/25/%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/" class="archive-article-date">
-  	<time datetime="2020-04-25T05:40:38.575Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/25/%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/">搜索技巧</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -461,8 +337,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
