@@ -172,9 +172,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h4 id="1-添加新分支login，在login分支中开发当前项目vue-shop"><a href="#1-添加新分支login，在login分支中开发当前项目vue-shop" class="headerlink" title="1.添加新分支login，在login分支中开发当前项目vue_shop"></a>1.添加新分支login，在login分支中开发当前项目vue_shop</h4><p>打开<strong>vue_shop终端</strong>（就是 <strong>cmd</strong> 或者 <strong>powerShell</strong>），使用 <strong>git status</strong> 确定当前项目状态。<br>确定当前工作目录是干净的之后，创建一个分支进行开发，开发完毕之后将其合并到master<br>创建一个新的分支 <strong>git checkout -b login</strong><br>然后查看新创建的分支：<strong>git branch</strong><br>确定我们正在使用login分支进行开发</p>
-<h4 id="2-将代码提交到码云"><a href="#2-将代码提交到码云" class="headerlink" title="2.将代码提交到码云"></a>2.将代码提交到码云</h4><p>新建一个项目终端,输入命令 <strong>git status</strong> 查看修改过的与新增的文件内容<br>将所有文件添加到暂存区： <strong>git add .</strong><br>将所有代码提交到本地仓库：<strong>git commit -m “添加注释信息”</strong><br>查看分支：  <strong>git branch</strong>  发现所有代码都被提交到了login分支<br>将login分支代码合并到master主分支，先切换到master：<strong>git checkout master</strong><br>在master分支进行代码合并：<strong>git merge login</strong><br>将本地的master推送到远端的码云：<strong>git push</strong></p>
-<p>推送本地的子分支到码云，先切换到子分支：<strong>git checkout 分支名</strong><br>然后推送到码云：<strong>git push -u origin 远端分支名</strong></p>
-<h2 id="注意：这里要先提交到git本地仓库，再切换到主分支合并，合并后提交到远端，最后把分支也提交到远端"><a href="#注意：这里要先提交到git本地仓库，再切换到主分支合并，合并后提交到远端，最后把分支也提交到远端" class="headerlink" title="注意：这里要先提交到git本地仓库，再切换到主分支合并，合并后提交到远端，最后把分支也提交到远端"></a>注意：这里要先提交到git本地仓库，再切换到主分支合并，合并后提交到远端，最后把分支也提交到远端</h2>
+        
       
 
       
