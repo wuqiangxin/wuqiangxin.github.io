@@ -151,6 +151,203 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-44 Vue 教程小结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/12/44%20Vue%20%E6%95%99%E7%A8%8B%E5%B0%8F%E7%BB%93/">44 Vue 教程小结</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/12/44%20Vue%20%E6%95%99%E7%A8%8B%E5%B0%8F%E7%BB%93/" class="archive-article-date">
+  	<time datetime="2020-10-12T03:28:30.960Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Vue-教程-小结"><a href="#Vue-教程-小结" class="headerlink" title="Vue  教程 小结"></a>Vue  教程 小结</h2><h4 id="1-Vue-是构造用户界面的的渐进式框架"><a href="#1-Vue-是构造用户界面的的渐进式框架" class="headerlink" title="1. Vue 是构造用户界面的的渐进式框架"></a>1. Vue 是构造用户界面的的渐进式框架</h4><h4 id="渐进式框架：可以只使用我的一部分，不需要使用我的所有内容"><a href="#渐进式框架：可以只使用我的一部分，不需要使用我的所有内容" class="headerlink" title="渐进式框架：可以只使用我的一部分，不需要使用我的所有内容"></a>渐进式框架：可以只使用我的一部分，不需要使用我的所有内容</h4><h3 id="Vue的核心库只关心-视图层，-易于上手"><a href="#Vue的核心库只关心-视图层，-易于上手" class="headerlink" title="Vue的核心库只关心 视图层， 易于上手"></a>Vue的核心库只关心 视图层， 易于上手</h3><h4 id="2-安装-Vue-CLI-Vue-脚手架"><a href="#2-安装-Vue-CLI-Vue-脚手架" class="headerlink" title="2. 安装 Vue CLI (Vue 脚手架)"></a>2. 安装 Vue CLI (Vue 脚手架)</h4><h5 id="2-1-全局安装-Vue-脚手架"><a href="#2-1-全局安装-Vue-脚手架" class="headerlink" title="2.1 全局安装 Vue 脚手架"></a>2.1 全局安装 Vue 脚手架</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 注： 包管理工具常用的有 npm yarn cnpm (一定要切换到淘宝镜像源 nrm)</span></span><br><span class="line">npm install -g @vue/cli</span><br><span class="line"># OR</span><br><span class="line">yarn global add @vue/cli</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-2-创建-Vue-项目"><a href="#2-2-创建-Vue-项目" class="headerlink" title="2.2 创建 Vue 项目"></a>2.2 创建 Vue 项目</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vue create my-project</span><br><span class="line"># OR</span><br><span class="line">vue ui</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-Vue-的数据可以绑定到-DOM文本-和-attribute-属性-，-还可以绑定到-DOM结构上"><a href="#3-Vue-的数据可以绑定到-DOM文本-和-attribute-属性-，-还可以绑定到-DOM结构上" class="headerlink" title="3.  Vue 的数据可以绑定到 DOM文本 和 attribute(属性)， 还可以绑定到 DOM结构上"></a>3.  Vue 的数据可以绑定到 DOM文本 和 attribute(属性)， 还可以绑定到 DOM结构上</h4><h4 id="4-v-model-可以轻松实现-表单输入-和-应用状态-的双向绑定"><a href="#4-v-model-可以轻松实现-表单输入-和-应用状态-的双向绑定" class="headerlink" title="4. v-model 可以轻松实现 表单输入 和 应用状态 的双向绑定"></a>4. v-model 可以轻松实现 表单输入 和 应用状态 的双向绑定</h4><h4 id="5-Vue-实例不仅有-数据property-还有-前缀-vm-data-vm-表示-ViewModel"><a href="#5-Vue-实例不仅有-数据property-还有-前缀-vm-data-vm-表示-ViewModel" class="headerlink" title="5. Vue 实例不仅有 数据property 还有 前缀$ (vm.$data)  vm 表示 ViewModel"></a>5. Vue 实例不仅有 数据property 还有 前缀$ (vm.$data)  vm 表示 ViewModel</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// $watch 是一个实例方法</span></span><br><span class="line">vm.$watch(<span class="string">'a'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">newValue, oldValue</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 这个回调将在 `vm.a` 改变后调用</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="6-Vue-页面初始化过程：-数据监听、编译模板、将实例挂载到DOM上、数据变化时更新DOM等等"><a href="#6-Vue-页面初始化过程：-数据监听、编译模板、将实例挂载到DOM上、数据变化时更新DOM等等" class="headerlink" title="6. Vue 页面初始化过程： 数据监听、编译模板、将实例挂载到DOM上、数据变化时更新DOM等等"></a>6. Vue 页面初始化过程： 数据监听、编译模板、将实例挂载到DOM上、数据变化时更新DOM等等</h4><h4 id="7-重要：不要在property（原型）-或-回调上使用箭头函数，-因为-this-的指向问题"><a href="#7-重要：不要在property（原型）-或-回调上使用箭头函数，-因为-this-的指向问题" class="headerlink" title="7. 重要：不要在property（原型） 或 回调上使用箭头函数， 因为 this 的指向问题"></a>7. 重要：不要在property（原型） 或 回调上使用箭头函数， 因为 this 的指向问题</h4><h4 id="8-Vue-生命周期钩子-图"><a href="#8-Vue-生命周期钩子-图" class="headerlink" title="8. Vue 生命周期钩子 图"></a>8. Vue 生命周期钩子 图</h4><p>! [alt Vue生命周期图] （<a href="https://cn.vuejs.org/images/lifecycle.png" target="_blank" rel="noopener">https://cn.vuejs.org/images/lifecycle.png</a> “Vue生命周期图”）</p>
+<h4 id="9-计算属性是有缓存-而-方法（函数）-是没有的，-如果一个变量需要重复计算且数据量很大时，用计算属性更适合"><a href="#9-计算属性是有缓存-而-方法（函数）-是没有的，-如果一个变量需要重复计算且数据量很大时，用计算属性更适合" class="headerlink" title="9.  计算属性是有缓存 而 方法（函数） 是没有的， 如果一个变量需要重复计算且数据量很大时，用计算属性更适合"></a>9.  计算属性是有缓存 而 方法（函数） 是没有的， 如果一个变量需要重复计算且数据量很大时，用计算属性更适合</h4><h4 id="10-key-是管理可复用元素"><a href="#10-key-是管理可复用元素" class="headerlink" title="10. key 是管理可复用元素"></a>10. key 是管理可复用元素</h4><h4 id="11-可以使用-v-for-来遍历对象的-property原型"><a href="#11-可以使用-v-for-来遍历对象的-property原型" class="headerlink" title="11. 可以使用 v-for 来遍历对象的 property原型"></a>11. 可以使用 v-for 来遍历对象的 property原型</h4><h4 id="12-我们不推荐同时使用-v-for-和-v-if-，因为-v-for-的优先级比-v-if-的高"><a href="#12-我们不推荐同时使用-v-for-和-v-if-，因为-v-for-的优先级比-v-if-的高" class="headerlink" title="12. 我们不推荐同时使用 v-for 和 v-if ，因为 v-for 的优先级比 v-if 的高"></a>12. 我们不推荐同时使用 v-for 和 v-if ，因为 v-for 的优先级比 v-if 的高</h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/12/44%20Vue%20%E6%95%99%E7%A8%8B%E5%B0%8F%E7%BB%93/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-46 uniapp改 图片上传bug 小结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/12/46%20uniapp%E6%94%B9%20%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0bug%20%E5%B0%8F%E7%BB%93/">46 uniapp改 图片上传bug 小结</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/12/46%20uniapp%E6%94%B9%20%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0bug%20%E5%B0%8F%E7%BB%93/" class="archive-article-date">
+  	<time datetime="2020-10-12T03:28:30.928Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="运维-app-小总结"><a href="#运维-app-小总结" class="headerlink" title="运维 app 小总结"></a>运维 app 小总结</h2><h4 id="1-在手机上测试-Uniapp项目-步骤"><a href="#1-在手机上测试-Uniapp项目-步骤" class="headerlink" title="1. 在手机上测试 Uniapp项目 步骤"></a>1. 在手机上测试 Uniapp项目 步骤</h4><h5 id="首先-用-USB-数据线连接手机和电脑，-然后手机上选择-MIDI-模式"><a href="#首先-用-USB-数据线连接手机和电脑，-然后手机上选择-MIDI-模式" class="headerlink" title="首先 用 USB 数据线连接手机和电脑， 然后手机上选择 MIDI 模式"></a>首先 用 USB 数据线连接手机和电脑， 然后手机上选择 MIDI 模式</h5><h5 id="然后在-HBuilder-上-点击运行，-选择运行到手机或者模拟器，在选择第一个设备即可"><a href="#然后在-HBuilder-上-点击运行，-选择运行到手机或者模拟器，在选择第一个设备即可" class="headerlink" title="然后在 HBuilder 上 点击运行， 选择运行到手机或者模拟器，在选择第一个设备即可"></a>然后在 HBuilder 上 点击运行， 选择运行到手机或者模拟器，在选择第一个设备即可</h5><h4 id="2-改-Bug-先找到报错的代码，-只需要修改报错的代码即可（很重要）"><a href="#2-改-Bug-先找到报错的代码，-只需要修改报错的代码即可（很重要）" class="headerlink" title="2. 改 Bug 先找到报错的代码， 只需要修改报错的代码即可（很重要）"></a>2. 改 Bug 先找到报错的代码， 只需要修改报错的代码即可（很重要）</h4><h4 id="不要管其他的逻辑代码"><a href="#不要管其他的逻辑代码" class="headerlink" title="不要管其他的逻辑代码"></a>不要管其他的逻辑代码</h4><h4 id="3-this-set-对象名，-‘修改的属性名’，-属性值"><a href="#3-this-set-对象名，-‘修改的属性名’，-属性值" class="headerlink" title="3. this.$set(对象名， ‘修改的属性名’， 属性值)"></a>3. this.$set(对象名， ‘修改的属性名’， 属性值)</h4><h5 id="修改的属性名-必须要有-引号括起来，-不然会成为变量，-报错-undefined"><a href="#修改的属性名-必须要有-引号括起来，-不然会成为变量，-报错-undefined" class="headerlink" title="修改的属性名 必须要有 引号括起来， 不然会成为变量， 报错 undefined"></a>修改的属性名 必须要有 引号括起来， 不然会成为变量， 报错 undefined</h5><h4 id="4-在手机上测试-app-时，-console-log-是打印在-HBuilder-终端命令行上的（注意观察）"><a href="#4-在手机上测试-app-时，-console-log-是打印在-HBuilder-终端命令行上的（注意观察）" class="headerlink" title="4. 在手机上测试 app 时， console.log() 是打印在 HBuilder 终端命令行上的（注意观察）"></a>4. 在手机上测试 app 时， console.log() 是打印在 HBuilder 终端命令行上的（注意观察）</h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/12/46%20uniapp%E6%94%B9%20%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0bug%20%E5%B0%8F%E7%BB%93/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-45 学习 计划" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/12/45%20%E5%AD%A6%E4%B9%A0%20%E8%AE%A1%E5%88%92/">45 学习 计划</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/12/45%20%E5%AD%A6%E4%B9%A0%20%E8%AE%A1%E5%88%92/" class="archive-article-date">
+  	<time datetime="2020-10-12T03:28:30.904Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="学习步骤"><a href="#学习步骤" class="headerlink" title="学习步骤"></a>学习步骤</h2><h4 id="1-Echarts-数据可视化"><a href="#1-Echarts-数据可视化" class="headerlink" title="1. Echarts  数据可视化"></a>1. Echarts  数据可视化</h4><h4 id="2-uniapp"><a href="#2-uniapp" class="headerlink" title="2. uniapp"></a>2. uniapp</h4><h4 id="3-React"><a href="#3-React" class="headerlink" title="3. React"></a>3. React</h4><h4 id="4-地图"><a href="#4-地图" class="headerlink" title="4. 地图"></a>4. 地图</h4><h4 id="5-TS"><a href="#5-TS" class="headerlink" title="5. TS"></a>5. TS</h4><h4 id="6-还有其他的扩展"><a href="#6-还有其他的扩展" class="headerlink" title="6. 还有其他的扩展"></a>6. 还有其他的扩展</h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/12/45%20%E5%AD%A6%E4%B9%A0%20%E8%AE%A1%E5%88%92/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-43 系统安装步骤 迅雷加速" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -605,201 +802,9 @@
 
 
   
-    <article id="post-35 git 进阶总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/25/35%20git%20%E8%BF%9B%E9%98%B6%E6%80%BB%E7%BB%93/">35 git 进阶总结</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/25/35%20git%20%E8%BF%9B%E9%98%B6%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2020-07-25T05:07:18.472Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="git-分布式版本管理"><a href="#git-分布式版本管理" class="headerlink" title="git 分布式版本管理"></a>git 分布式版本管理</h2><p>地址： <a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/896043488029600</a></p>
-<p>git 是用 C语言 开发的</p>
-<p>git 版本管理 是不能管理 <strong>二进制文件</strong> 的 （图片、视频、word文档等都是二进制文件）</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/25/35%20git%20%E8%BF%9B%E9%98%B6%E6%80%BB%E7%BB%93/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-34 小程序的配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/14/34%20%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E9%85%8D%E7%BD%AE/">34 小程序的配置</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/14/34%20%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2020-06-14T02:13:12.563Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="将-JS-代码抽离到单独的页面"><a href="#将-JS-代码抽离到单独的页面" class="headerlink" title="将 JS 代码抽离到单独的页面"></a>将 JS 代码抽离到单独的页面</h4><p><strong>结构的代码</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> wepy <span class="keyword">from</span> <span class="string">'wepy'</span>;</span></span><br><span class="line"><span class="actionscript"><span class="comment">// 1. 导入外界的 mixin 文件，并接受</span></span></span><br><span class="line"><span class="actionscript"><span class="comment">// @ 就代表 src 这一层路径</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> mix <span class="keyword">from</span> <span class="string">'@/mixins/goods_list.js'</span>; <span class="comment">// @后面是文件的路径</span></span></span><br><span class="line"></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="keyword">extends</span> <span class="title">wepy</span>.<span class="title">page</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">    <span class="comment">// config 是不能抽离 出去的（抽离出去也是不会生效的）</span></span></span><br><span class="line">  config = &#123;</span><br><span class="line"><span class="actionscript">    navigationBarTitleText: <span class="string">'商品列表'</span>,</span></span><br><span class="line"><span class="actionscript">    <span class="comment">// 上拉触底的距离，默认是 50px</span></span></span><br><span class="line">    onReachBottomDistance: 100,</span><br><span class="line"><span class="actionscript">    <span class="comment">// 下拉刷新</span></span></span><br><span class="line"><span class="actionscript">    enablePullDownRefresh: <span class="literal">true</span>,</span></span><br><span class="line"><span class="actionscript">    <span class="comment">// 下拉刷新框的背景色</span></span></span><br><span class="line"><span class="actionscript">    backgroundColor: <span class="string">'#eee'</span></span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line"><span class="actionscript">  <span class="comment">// 2. 把导入的 mix 对象，挂载到 mixins 这个数据中就行</span></span></span><br><span class="line">  mixins = [mix];</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/14/34%20%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E9%85%8D%E7%BD%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-33 VS code 的配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/14/33%20VS%20code%20%E7%9A%84%E9%85%8D%E7%BD%AE/">33 VS code 的配置</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/14/33%20VS%20code%20%E7%9A%84%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2020-06-14T01:51:41.391Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="VS-code-字体（推荐使用-很适合）"><a href="#VS-code-字体（推荐使用-很适合）" class="headerlink" title="VS code 字体（推荐使用 很适合）"></a>VS code 字体（推荐使用 很适合）</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Consolas, <span class="string">'Courier New'</span>, monospace</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/14/33%20VS%20code%20%E7%9A%84%E9%85%8D%E7%BD%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
     </nav>
   
 
