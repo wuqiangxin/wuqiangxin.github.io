@@ -1,8 +1,3 @@
-<div class="postBody">
-                    <div id="cnblogs_post_description" style="display: none">
-        
-        这是一篇搭建自己个人博客的教程
-    </div>
 <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
 <span title-type="h1" class="header__span"><h1 id="基础篇搭建hexo博客一" class="header__dev"><b class="dev__fe"><i>1</i></b><span class="dev__slash">|</span><b class="dev__ux"><i>0</i></b><b class="dev__developer"><span class="dev__title">【基础篇】搭建hexo博客（一）</span></b></h1></span><br>
 <p>作者：Huanhao</p>
@@ -475,66 +470,3 @@
 <p><a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_15-11-58.91hsb6n2sg.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_15-11-58.91hsb6n2sg.png" alt="image" loading="lazy" class="medium-zoom-image"></a></p>
 <p>之后你会得到一个地址，这个就是你的网站地址了</p>
 <p><a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_15-06-38.5i4rmc7ha2g.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_15-06-38.5i4rmc7ha2g.png" alt="image" loading="lazy" class="medium-zoom-image"></a></p>
-<p><strong>教程结束，进阶篇请期待</strong></p>
-<p>我的同步更新博客: <a href="https://mrhuanhao.cn/" target="_blank">https://mrhuanhao.cn/</a></p>
-
-<br><p class="essaySuffix-eof">__EOF__</p><div class="essaySuffix-box"><div class="essaySuffix-box-left"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/cdn/blog/huanhao.jpg" alt=""></div><div class="essaySuffix-box-right"><span class="essaySuffix-right-title">本文作者</span>：<strong><span style="font-size: 12px;"><a href="https://www.cnblogs.com/huanhao/p/hexobase.html" target="_blank">HuanHao</a></span></strong> <br><span style="font-weight: bold; white-space:nowrap;">本文链接</span>：<a href="https://www.cnblogs.com/huanhao/p/hexobase.html" target="_blank">https://www.cnblogs.com/huanhao/p/hexobase.html</a><br><span class="essaySuffix-right-title">关于博主</span>：评论和私信会在第一时间回复。或者<a href="https://msg.cnblogs.com/msg/send/huanhao" target="_blank">直接私信</a>我。<br><span class="essaySuffix-right-title">版权声明</span>：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" alt="BY-NC-SA" title="BY-NC-SA" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！<br><span class="essaySuffix-right-title">声援博主</span>：如果您觉得文章对您有帮助，可以点击文章右下角<strong><span style="color: #ff0000; font-size: 12pt;">【<a id="post-up" onclick="votePost(hexobase,'Digg')" href="javascript:void(0);">推荐</a>】</span></strong>一下。您的鼓励是博主的最大动力！<br></div><div style="clear: both;"></div></div></div>
-<div id="MySignature">
-    如果你喜欢我的文章，可以关注一下我的博客，或者关注我的bilibili：https://space.bilibili.com/67268239
-</div>
-<div class="clear"></div>
-<div id="blog_post_info_block"><div id="BlogPostCategory">
-    分类: 
-            <a href="https://www.cnblogs.com/huanhao/category/1651577.html" target="_blank"><span class="iconfont icon-marketing_fill"></span>网站搭建</a></div>
-<div id="EntryTag">
-    标签: 
-            <a href="https://www.cnblogs.com/huanhao/tag/%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><span class="iconfont icon-label_fill"></span>免费博客搭建</a>,             <a href="https://www.cnblogs.com/huanhao/tag/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><span class="iconfont icon-label_fill"></span>博客搭建</a>,             <a href="https://www.cnblogs.com/huanhao/tag/Hexo/"><span class="iconfont icon-label_fill"></span>Hexo</a></div>
-
-    <div id="blog_post_info">
-<div id="green_channel">
-        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(12383083,cb_blogId,1);green_channel_success(this,'谢谢推荐！');">好文要顶</a>
-        <a id="green_channel_follow" onclick="follow('07ea100a-c834-41cf-2ea9-08d7b205ed8e');" href="javascript:void(0);">关注我</a>
-    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
-    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="https://common.cnblogs.com/images/icon_weibo_24.png" alt=""></a>
-    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="https://common.cnblogs.com/images/wechat.png" alt=""></a>
-</div>
-<div id="author_profile">
-    <div id="author_profile_info" class="author_profile_info">
-            <a href="https://home.cnblogs.com/u/huanhao/" target="_blank"><img src="https://pic.cnblogs.com/face/sample_face.gif" class="author_avatar" alt=""></a>
-        <div id="author_profile_detail" class="author_profile_info">
-            <a href="https://home.cnblogs.com/u/huanhao/">huanhao</a><br>
-            <a href="https://home.cnblogs.com/u/huanhao/followees/">关注 - 1</a><br>
-            <a href="https://home.cnblogs.com/u/huanhao/followers/">粉丝 - 13</a>
-        </div>
-    </div>
-    <div class="clear"></div>
-    <div id="author_profile_honor"></div>
-    <div id="author_profile_follow">
-                <a href="javascript:void(0);" onclick="follow('07ea100a-c834-41cf-2ea9-08d7b205ed8e');return false;">+加关注</a>
-    </div>
-</div>
-<div id="div_digg">
-    <div class="diggit" onclick="votePost(12383083,'Digg')">
-        <span class="diggnum" id="digg_count">4</span>
-    </div>
-    <div class="buryit" onclick="votePost(12383083,'Bury')">
-        <span class="burynum" id="bury_count">0</span>
-    </div>
-    <div class="clear"></div>
-    <div class="diggword" id="digg_tips">
-    </div>
-</div>
-
-<script type="text/javascript">
-    currentDiggType = 0;
-</script></div>
-    <div class="clear"></div>
-    <div id="post_next_prev">
-
-    <a href="https://www.cnblogs.com/huanhao/p/newweb.html" class="p_n_p_prefix">« </a> 上一篇：    <a href="https://www.cnblogs.com/huanhao/p/newweb.html" title="发布于 2020-02-21 17:45">新网址,之后将同步更新，博客园可能会更新较慢</a>
-    <br>
-    <a href="https://www.cnblogs.com/huanhao/p/prettykde.html" class="p_n_p_prefix">» </a> 下一篇：    <a href="https://www.cnblogs.com/huanhao/p/prettykde.html" title="发布于 2020-03-05 17:35">【kde美化】ArchLinux</a>
-
-</div>
-</div>
-            </div>
