@@ -1,0 +1,35 @@
+####  1. 配置 mySql 数据库，运行 wqx-shop 步骤
+注意： 这里直接拷贝 项目实战day6  的素材文件/wqx-shop数据库
+
+```js
+1. 找到 vue-shop 素材文件，将 vue_api_server 解压到当前文件夹
+
+2. 安装 phpstudy，
+
+3. 选择 MYSQL管理器中的，MYSQL导入导出
+注意： 这里的还原文件选择 素材/vue_api_server/db/mydb.sql
+
+4. 最后，选择 其他选项菜单 中的 MYSQL工具 里面的 打开数据库目录。
+注意： 打开后的文件夹出现 mydb 文件夹。 就算成功了
+```
+![](https://img2020.cnblogs.com/blog/2113686/202108/2113686-20210819103744703-1607358954.png)
+
+<br />
+
+![](https://img2020.cnblogs.com/blog/2113686/202108/2113686-20210819103802714-1979019652.png)
+
+<br />
+
+#### 2. 直接在 vue_api_server 文件夹中 打开 cmd
+
+```js
+1. npm i   安装依赖包
+
+2. node app.js  运行数据库  打开后如下所示
+```
+
+![](https://img2020.cnblogs.com/blog/2113686/202108/2113686-20210819111224996-1594153313.png)
+
+#### 3. 用 postman 测试一下
+
+![](https://img2020.cnblogs.com/blog/2113686/202108/2113686-20210819111305054-1510390407.png)
